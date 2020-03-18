@@ -1,6 +1,8 @@
 @extends('dashboard.homepage.app')
 <!-- Main Content -->
 
+{{ error_reportint(0) }}
+
 @section('content')
 
 <!-- Main Content -->
