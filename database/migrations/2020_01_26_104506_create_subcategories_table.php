@@ -16,8 +16,8 @@ class CreateSubcategoriesTable extends Migration
         Schema::create('subcategories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('subcategory_name');
-            $table->integer('category_id');
-            $table->softDeletes();
+            $table->integer('category_id')->nullable();
+            $table->integer('activation')->default(1);
             $table->timestamps();
         });
     }
