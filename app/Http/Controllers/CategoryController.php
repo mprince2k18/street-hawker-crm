@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
+use App\category;
 use App\Subcategory;
 use Carbon\Carbon;
 
@@ -13,7 +13,7 @@ class CategoryController extends Controller
     function cat_create(Request $request)
     {
         // echo $request;
-        Category::insert([
+        category::insert([
             'category_name'         =>$request->category_name,
             'created_at'             =>Carbon::now(),
         ]);

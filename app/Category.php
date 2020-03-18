@@ -3,11 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class category extends Model
 {
-    use SoftDeletes;
-    
-    protected $fillable = ['category_name'];
+    protected $fillable = ['category_name',
+        'activation',
+        'aditional_information',
+        'category_photo',
+        'category_big_photo',
+    ];
 }
