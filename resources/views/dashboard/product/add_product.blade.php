@@ -1,7 +1,7 @@
 @extends('dashboard.homepage.app')
 <!-- Main Content -->
 
-{{ error_reportint(0) }}
+{{ error_reporting(0) }}
 
 @section('content')
 
