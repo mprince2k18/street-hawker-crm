@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\category;
-use App\Subcategory;
+use App\sub_category;
 use Carbon\Carbon;
 
 class CategoryController extends Controller
@@ -24,7 +24,7 @@ class CategoryController extends Controller
     function sub_cat_create(Request $request)
     {
         // echo $request;
-        Subcategory::insert([
+        sub_category::insert([
             'subcategory_name'          =>$request->category_name,
             'category_id'               =>$request->category_id,
             'created_at'                =>Carbon::now(),

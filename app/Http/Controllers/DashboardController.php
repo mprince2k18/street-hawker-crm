@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
-use App\Subcategory;
+use App\sub_category;
 use App\product;
 
 class DashboardController extends Controller
@@ -29,7 +29,7 @@ class DashboardController extends Controller
   function add_product ()
   {
     $categories = Category::all();
-    $subcategories = Subcategory::all();
+    $subcategories = sub_category::all();
     return view('dashboard.product.add_product',compact('categories','subcategories'));
   }
 
