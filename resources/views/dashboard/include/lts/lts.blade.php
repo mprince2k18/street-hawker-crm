@@ -1,16 +1,16 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.html"><img src="assets/images/logo.svg" width="25" alt="Aero"><span class="m-l-10">Aero</span></a>
+        <a href="index.html"><img src="https://streethawker.com.bd/frontEnd/img/logo/5.png" width="25" alt="Aero"><span class="m-l-10">Street Hawker</span></a>
     </div>
     <div class="menu">
         <ul class="list">
             <li>
                 <div class="user-info">
-                    <a class="image" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                    <a class="image" href="profile.html"><img src="https://koms.korloy.com/resource/lib/ace-admin/assets/avatars/profile-pic.jpg" alt="User"></a>
                     <div class="detail">
-                        <h4>Michael</h4>
-                        <small>Super Admin</small>
+                        <h4>{{ Auth::user()->name }}</h4>
+                        {{-- <small>Super Admin</small> --}}
                     </div>
                 </div>
             </li>
