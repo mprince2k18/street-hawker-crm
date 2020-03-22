@@ -138,6 +138,7 @@ fhhfgrhui
       <td>৳ {{ $singleOrder->tot }}</td>
       <td>{{ $singleOrder->created_at }}</td>
       <td>
+
         @if ($singleOrder->actionStatus == 0)
           <span class="badge badge-pill badge-primary">New Order</span>
         @elseif($singleOrder->actionStatus == 1)
@@ -148,6 +149,28 @@ fhhfgrhui
           <span class="badge badge-pill badge-success">Confirmed</span>
         @elseif($singleOrder->actionStatus == 4)
           <span class="badge badge-pill badge-danger">Canceled</span>
+        @endif
+
+        @if ($singleOrder->actionStatus == 0)
+
+
+          <a id="navbarDropdown1" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre="">
+            <span class="caret"><span class="badge badge-pill badge-primary">New Order</span></span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1" x-placement="top-end" x-out-of-boundaries="" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(384px, 183px, 0px);">
+          <a class="dropdown-item" href=" {{url('change/action/status')}}/{{$singleOrder->id}}/1 ">
+                  Pending
+          </a>
+          <a class="dropdown-item" href=" {{url('change/action/status')}}/{{$singleOrder->id}}/2 ">
+                  Follow Up
+          </a>
+          <a class="dropdown-item" href=" {{url('change/action/status')}}/{{$singleOrder->id}}/3 ">
+                  Confirm
+          </a>
+          <a class="dropdown-item" href=" {{url('change/action/status')}}/{{$singleOrder->id}}/4 ">
+                  Cancel
+          </a>
+          </div>
         @endif
       </td>
     </tr>

@@ -129,7 +129,7 @@ class OrderController extends Controller
 
   }
     function totalorder(){
-      $allOrders = billingOrderDetails::paginate(30);
+      $allOrders = billingOrderDetails::latest()->paginate(30);
       // echo $allOrders;
       return view('dashboard.homepage.totalOrder',compact('allOrders'));
     }
